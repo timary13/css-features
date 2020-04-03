@@ -18,6 +18,7 @@ function createOption({ title, image_url }) {
     option.setAttribute('value', title);
     const image = document.createElement('img');
     image.src = image_url;
+    image.alt = title;
     const simplyText = document.createTextNode(title);
     option.append(image, simplyText);
     return option;
@@ -28,6 +29,9 @@ export function createSelectTable(select, items) {
     items.forEach(item => {
         const div = createOption(item);
         container.appendChild(div);
+    });
+    container.addEventListener('click', function (event) {
+       console.log(event.target.getAttribute('alt') || event.target.getAttribute('value'));
     });
     select.parentNode.appendChild(container);
 }
