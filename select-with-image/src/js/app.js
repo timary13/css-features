@@ -10,7 +10,6 @@ CreateDom.createSelectTable(select, items);
 select.focus();
 
 select.addEventListener('click', function () {
-    console.log('click');
    const element = document.getElementsByClassName('select-items');
    element[0].classList.toggle('open');
 });

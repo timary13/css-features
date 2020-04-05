@@ -8,7 +8,7 @@ export function createDiv(className, id = '') {
 };
 
 export function createSelect(id) {
-    const select = document.createElement('select');
+    const select = document.createElement('input');
     select.setAttribute('id', id);
     return select;
 };
@@ -31,7 +31,13 @@ export function createSelectTable(select, items) {
         container.appendChild(div);
     });
     container.addEventListener('click', function (event) {
-       console.log(event.target.getAttribute('alt') || event.target.getAttribute('value'));
+        const checked = event.target.getAttribute('alt') || event.target.getAttribute('value');
+       console.log(checked);
+
+        document.getElementById('mySelect').value = checked;
+
+        const element = document.getElementsByClassName('select-items');
+        element[0].classList.toggle('open');
     });
     select.parentNode.appendChild(container);
 }
