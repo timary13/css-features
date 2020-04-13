@@ -1,0 +1,38 @@
+.menu-block.icon {
+    overflow: unset;
+    position: relative;
+}
+
+.menu-icon {
+    display: flex;
+}
+
+.menu-icon a {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: #ffffff;
+    color: #222;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: calc(50% - 12px);
+    left: calc(50% - 12px);
+    transition: 0.3s;
+}
+
+.menu-icon.active a:nth-child(1) {
+    transform: translate(200%, 0%);
+}
+
+.menu-icon.active a:nth-child(2) {
+    transform: translate(170%, 140%);
+    transition-delay: 0.1s;
+}
+
+.menu-icon.active a:nth-child(3) {
+    transform: translate(0%, 200%);
+    transition-delay: 0.2s;
+}
