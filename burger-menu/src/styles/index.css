@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.section {
+    background-color: #81D4FA;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.menu-block {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 50px;
+}

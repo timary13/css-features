@@ -1,15 +1,20 @@
-import "./index.css";
+import "./styles/index.css";
+import './styles/burger-btn.css';
+import './styles/right-gorizontal-menu.css';
+import './styles/right-vertical-menu.css';
 
-const btn = document.getElementsByClassName('menu-btn')[0];
-const menu = document.getElementsByClassName('menu')[0];
+const btns = document.getElementsByClassName('menu-btn');
+const menu = document.getElementsByClassName('menu');
 
-const eventClick = btn.addEventListener('click', function (e) {
-    e.preventDefault();
-    btn.classList.toggle('menu-btn_active');
-    menu.classList.toggle('menu_active');
-});
+ for(let i = 0; i < btns.length; i++) {
+    console.log('btn');
+    const eventClick = btns[i].addEventListener('click', function (e) {
+        e.preventDefault();
+        btns[i].classList.toggle('menu-btn_active');
+        menu[i].classList.toggle('menu_active');
+    });
 
-
-const eventLinkClick = menu.addEventListener('click', function (e) {
-    e.preventDefault();
-});
+     const eventLinkClick = menu[i].addEventListener('click', function (e) {
+         e.preventDefault();
+     });
+}

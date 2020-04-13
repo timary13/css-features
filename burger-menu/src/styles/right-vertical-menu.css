@@ -1,0 +1,12 @@
+.menu-block.vertical {
+    align-items: end;
+    border-radius: 20px;
+}
+
+.menu.vertical {
+    flex-direction: column;
+    border-radius: 20px;
+    border-top-left-radius: unset;
+    padding-left: 25px;
+    margin-left: -25px;
+}
