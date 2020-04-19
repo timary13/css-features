@@ -1,0 +1,25 @@
+.wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  text-transform: uppercase;
+  &::before {
+    content: '';
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    margin-right: 10px;
+  }
+}
+
+.checkbox {
+  display: none;
+  margin-left: -20px;
+  &:checked + label::before {
+    content: '';
+    background-color: #01ff70;
+  }
+}
