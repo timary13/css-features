@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  font-family: sans-serif; }
+
+.links {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin: 10% 20%; }
+  .links a {
+    text-decoration: none; }
+
+.from-left a::after, .from-left-to-right a::after, .from-center a::after, .under-and-above a::after, .under-and-above a::before {
+  content: '';
+  position: absolute;
+  height: 2px;
+  background-color: #000;
+  width: 0;
+  transition: .2s; }
+
+.from-left a, .from-left-to-right a, .from-center a, .under-and-above a {
+  position: relative;
+  padding-bottom: 3px; }
+
+.from-left a::after {
+  bottom: 0;
+  left: 0; }
+.from-left a:hover:after {
+  width: 100%; }
+
+.from-left-to-right a::after {
+  bottom: 0;
+  right: 0; }
+.from-left-to-right a:hover:after {
+  width: 100%;
+  left: 0; }
+
+.from-center a::after {
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  transform: scale(0); }
+.from-center a:hover:after {
+  transform: scale(1); }
+
+.under-and-above a {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+  .under-and-above a::after, .under-and-above a::before {
+    width: 100%;
+    background-color: #2e2e2e;
+    opacity: 0;
+    transition: .5s; }
+  .under-and-above a::after {
+    bottom: 0;
+    left: 0;
+    transform: translateY(15px); }
+  .under-and-above a::before {
+    top: 0;
+    left: 0;
+    transform: translateY(-15px); }
+  .under-and-above a:hover:after, .under-and-above a:hover:before {
+    transform: translateY(0);
+    opacity: 1; }
+
+/*# sourceMappingURL=index.css.map */
