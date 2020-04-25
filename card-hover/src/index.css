@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: sans-serif; }
+
+.wrap {
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center; }
+
+figure::before, figure::after {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 5px;
+  right: 5px;
+  bottom: 5px;
+  transition: .2s; }
+
+figure {
+  height: 30%;
+  width: 20%;
+  background-color: #39b494;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  overflow: hidden; }
+  figure h2 {
+    padding-bottom: 20px;
+    transition: transform .2s ease;
+    transform: translateY(50px); }
+  figure p {
+    margin: 10px;
+    border: 1px solid #1f4019;
+    background-color: #cbcec8;
+    transition: transform .2s ease, opacity .2s ease;
+    transform: translateY(150px);
+    opacity: 0; }
+  figure::before {
+    border-bottom: 2px solid black;
+    border-top: 2px solid black;
+    transform: scaleX(0); }
+  figure::after {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    transform: scaleY(0); }
+  figure:hover:before {
+    transform: scaleX(1); }
+  figure:hover:after {
+    transform: scaleY(1); }
+  figure:hover h2 {
+    transform: translateY(0); }
+  figure:hover p {
+    transform: translateY(0);
+    opacity: 1; }
+
+/*# sourceMappingURL=index.css.map */
