@@ -14,14 +14,18 @@ body {
 
 .button {
   background-color: #4c8bb0;
-  padding: 10px 20px;
-  border-radius: 10px;
-  position: relative;
-  overflow: hidden;
 
   & a {
     text-decoration: none;
   }
+}
+
+
+.flare {
+  padding: 10px 20px;
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
 
   &::before {
     content: '';
@@ -45,5 +49,35 @@ body {
     to {
       transform: skew(-40deg) translateX(150px);
     }
+  }
+}
+
+.border {
+  width: 130px;
+  height: 40px;
+  cursor: pointer;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 40px;
+  color: white;
+  position: relative;
+
+  svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+     rect {
+      stroke: #122747;
+      stroke-width: 2;
+      transition: .8s;
+      stroke-dasharray: 400, 0;
+    }
+  }
+
+  &:hover svg rect {
+    stroke-width: 4;
+    stroke-dasharray: 50, 225;
+    stroke-dashoffset: 65;
   }
 }
