@@ -44,7 +44,8 @@ body {
   text-align: center;
   line-height: 40px;
   color: white;
-  position: relative; }
+  position: relative;
+  box-shadow: 0 0 15px #4c8bb0; }
   .border svg {
     position: absolute;
     left: 0;
