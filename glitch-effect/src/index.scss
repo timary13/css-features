@@ -1,0 +1,62 @@
+body {
+  padding: 0;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  & h1 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 10em;
+    color: #ffffff;
+    width: 50%;
+    position: relative;
+
+    &::before,
+    &::after {
+      content: 'Glitch effect';
+      position: absolute;
+      top: 0;
+    }
+
+    &::before {
+      left: -5px;
+      animation: glitch-left 2s infinite ease;
+    }
+
+    &::after {
+      left: 5px;
+      animation: glitch-right 2s infinite ease;
+    }
+
+    @keyframes glitch-left {
+      $steps: 25;
+      @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+          $top: random(100);
+          $bottom: random(101 - $top);
+          clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+        }
+      }
+    }
+
+    @keyframes glitch-right {
+      $steps: 25;
+      @for $i from 0 through $steps {
+        #{percentage($i*(1/$steps))} {
+          $top: random(100);
+          $bottom: random(101 - $top);
+          clip-path: inset(#{$top}% 0 #{$bottom}% 0);
+        }
+      }
+    }
+
+  }
+}
