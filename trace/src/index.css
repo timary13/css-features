@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.foot{
+    width: 250px;
+    height: 400px;
+    background: url("../assets/full.png") no-repeat top left;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+}
+
+.high {
+    height: 50%;
+}
+
+.middle {
+    height: 23%;
+}
+
+.low {
+    height: 27%;
+}
+
+.high:hover,
+.middle:hover,
+.low:hover {
+    background-color: rgba(157, 184, 132, 0.2);
+    border: 1px solid rgb(157, 184, 132);
+}
+
+.active {
+    background-color: rgba(157, 184, 132, 0.4);
+}
+
+.extra {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
