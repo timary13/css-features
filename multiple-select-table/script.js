@@ -4,6 +4,12 @@ table.addEventListener('click', (event) => {
     event.target.classList.toggle('selected');
     const button = event.target.dataset.selector;
     const toggleSelected = button => button.classList.toggle('selected');
+    const removeSelected = button => button.classList.remove('selected');
+    const deSelectAllButtons = () => {
+        const buttons = document.querySelectorAll('[data-align]');
+        buttons.forEach(removeSelected);
+    }
+    deSelectAllButtons();
     switch (button) {
         case 'left':
             const left_buttons = document.querySelectorAll('[data-align="left"]');
