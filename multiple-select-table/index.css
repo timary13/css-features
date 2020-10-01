@@ -25,7 +25,7 @@
     background-color: #c7c6c6;
 }
 
-.table-grid > button.selected {
+.table-grid > button:not(.table-header).selected {
     background-color: #a3a2a2;
 }
 
