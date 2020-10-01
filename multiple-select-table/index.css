@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.table-grid {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto) repeat(5, 100px);
+}
+
+.table-grid > button {
+    cursor: pointer;
+    font-size: 1.2rem;
+    border: 1px solid black;
+    outline: none;
+    background-color: #FFFFFF;
+}
+
+.table-grid > button:hover {
+    background-color: #c7c6c6;
+}
+
+.table-grid > button.selected {
+    background-color: #a3a2a2;
+}
+
+.span-two {
+    grid-column: span 2;
+    text-align: left;
+}
+
+.span-four {
+    grid-column: span 3;
+}
+
+.table-grid .table-header {
+    font-size: .8rem;
+    font-weight: bold;
+    border: none;
+}
