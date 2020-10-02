@@ -16,7 +16,7 @@ body {
 
 input {
     border: 1px solid transparent;
-    background: #f1f1f1 url('../assets/arrow-down.png') 99% center no-repeat;
+    background: #f1f1f1 url(57a90a45bc10cfb4b41e5c951a4c107b.png) 99% center no-repeat;
     background-size: 1%;
     padding: 10px;
     font-size: 16px;
@@ -68,4 +68,5 @@ input {
     background-color: #e1e4f3;
     border-color: #0d3349;
 }
+
 
