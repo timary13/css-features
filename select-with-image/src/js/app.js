@@ -9,6 +9,8 @@ document.body.append(div);
 CreateDom.createSelectTable(select, items);
 select.focus();
 
+CreateDom.setValueSelect(select, 'Second');
+
 select.addEventListener('click', function () {
    const element = document.getElementsByClassName('select-items');
    element[0].classList.toggle('open');
