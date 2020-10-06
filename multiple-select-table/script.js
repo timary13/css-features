@@ -2,8 +2,6 @@ const table = document.querySelector('#table');
 
 table.addEventListener('click', (event) => {
     event.preventDefault();
-    console.log(event.target.classList);
-    event.target.classList.toggle('selected');
     const button = event.target.dataset.selector;
     const toggleSelected = button => button.classList.toggle('selected');
     const removeSelected = button => button.classList.remove('selected');
@@ -48,6 +46,8 @@ table.addEventListener('click', (event) => {
             all_buttons.forEach(toggleSelected);
             break;
         default:
-            return;
+            event.target.classList.toggle('selected');
+            event.target.value = (event.target.value ? '' : button);
+            break;
     }
 });
