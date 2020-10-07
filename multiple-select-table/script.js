@@ -5,6 +5,12 @@ table.addEventListener('click', (event) => {
     const button = event.target.dataset.selector;
     const toggleSelected = button => button.classList.toggle('selected');
     const removeSelected = button => button.classList.remove('selected');
+    const setHiddenInputValue = () => {
+        const hiddenInput = document.querySelector('#location');
+        const selectedButtons = Array.from(document.querySelectorAll('.selected'));
+        const selectedNumbers = selectedButtons.map(item => item.innerHTML);
+        hiddenInput.setAttribute('value', selectedNumbers.join('&'));
+    };
     const deSelectAllButtons = () => {
         const buttons = document.querySelectorAll('[data-align]');
         buttons.forEach(removeSelected);
@@ -50,4 +56,6 @@ table.addEventListener('click', (event) => {
             event.target.value = (event.target.value ? '' : button);
             break;
     }
+
+    setHiddenInputValue();
 });
